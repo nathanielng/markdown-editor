@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Markdown Editor</h1>
+            <div class="toolbar">
+                <button class="btn" id="boldBtn" title="Bold">
+                    <strong>B</strong>
+                </button>
+                <button class="btn" id="italicBtn" title="Italic">
+                    <em>I</em>
+                </button>
+                <button class="btn" id="headingBtn" title="Heading">H</button>
+                <button class="btn" id="linkBtn" title="Link">🔗</button>
+                <button class="btn" id="codeBtn" title="Code">&lt;/&gt;</button>
+                <button class="btn" id="clearBtn" title="Clear">Clear</button>
+            </div>
+        </header>
+
+        <div class="editor-container">
+            <div class="editor-pane">
+                <div class="pane-header">Markdown</div>
+                <textarea id="markdown-input" placeholder="# Start typing your markdown here...
+
+## Features
+- Real-time preview
+- Syntax highlighting
+- Easy formatting
+
+Try writing some **bold** or *italic* text!"></textarea>
+            </div>
+
+            <div class="preview-pane">
+                <div class="pane-header">Preview</div>
+                <div id="preview"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
